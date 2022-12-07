@@ -18,7 +18,7 @@
      <!-- GUI END-->
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script>
-        const MY_SERVER ="https://fullcrud.onrender.com/" //flask
+        const MY_SERVER ="https://fullcrud.onrender.com/students" //flask
         // const MY_SERVER ="https://jsonplaceholder.typicode.com/users/" //json place holder
         // const MY_SERVER = "http://localhost:3000/students/" // fake json server
         // const MY_SERVER ="http://localhost:5000/students" //my flask python
@@ -38,7 +38,7 @@
 
         // post (Create)
         const addData =async () => {
-           await axios.post(MY_SERVER, { city: username.value, name: email.value }).then((res) => console.log(res.data))
+           await axios.post(MY_SERVER + "/", { city: username.value, name: email.value }).then((res) => console.log(res.data))
             loadData()
         }
 
