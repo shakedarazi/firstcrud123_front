@@ -38,7 +38,7 @@
 
         // post (Create)
         const addData =async () => {
-           await axios.post(MY_SERVER+"/", { city: username.value, name: email.value }).then((res) => console.log(res.data))
+           await axios.post(MY_SERVER, { city: username.value, name: email.value }).then((res) => console.log(res.data))
             loadData()
         }
 
